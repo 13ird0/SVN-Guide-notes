@@ -51,7 +51,10 @@ How do we view the past of a project with svn?- You can use svn diff.
 16
 Great Scott!
 If there was a mistake made in the past of a project, how should we go about
-correcting that mistake in svn?
+correcting that mistake in svn?-Use the command 
+    svn merge --dry-run -r:73:68 http://my.repository.com/my/project/trunk
+    svn merge -r:73:68 http://my.repository.com/my/project/trunk
+    svn commit -m "Reverted to revision 68."
 17
 The initial upload
 If you have an existing project and want to start tracking it with svn, how
